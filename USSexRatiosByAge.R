@@ -38,36 +38,44 @@ July1989USMale<-aggregate(July1989[,5], by=list(July1989[,3]), FUN=sum)
 July1989USFemale<-aggregate(July1989[,6], by=list(July1989[,3]), FUN=sum)
 July1989SexRatio<-July1989USMale/July1989USFemale
 
+#"Intercensal Estimates of the United States Resident Population by Age and Sex: 1990"
 All1990US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1990-2000/intercensal/national/us-est90int-07-1990.csv",header=FALSE,skip=3,sep=",")
 July1990US<-subset(All1990US,All1990US$V1=="July 1, 1990")
 July1990SexRatio<-July1990US$V4[2:102]/July1990US$V5[2:102]
 
+#"Intercensal Estimates of the United States Resident Population by Age and Sex: 1995"
 All1995US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1990-2000/intercensal/national/us-est90int-07-1995.csv",header=FALSE,skip=3,sep=",")
 July1995US<-subset(All1995US,All1995US$V1=="July 1, 1995")
 July1995SexRatio<-July1995US$V4[2:102]/July1995US$V5[2:102]
 
+#"Intercensal Estimates of the United States Resident Population by Age and Sex: 1999"
 All1999US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1990-2000/intercensal/national/us-est90int-07-1999.csv",header=FALSE,skip=3,sep=",")
 July1999US<-subset(All1999US,All1999US$V1=="July 1, 1999")
 July1999SexRatio<-July1999US$V4[2:102]/July1999US$V5[2:102]
 
+#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info)
 All2000US<-read.table(file="https://www2.census.gov/programs-surveys/popest/datasets/2000-2010/intercensal/national/us-est00int-alldata.csv",header=FALSE,skip=3,sep=",")
 July2000US<-subset(All2000US,c(All2000US$V1==7,All2000US$V2==2000))
 July2000SexRatio<-July2000US$V5[2:87]/July2000US$V6[2:87]
 
+#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info)
 All2005US<-read.table(file="https://www2.census.gov/programs-surveys/popest/datasets/2000-2010/intercensal/national/us-est00int-alldata.csv",header=FALSE,skip=3,sep=",")
 July2005US<-subset(All2005US,c(All2005US$V2==2005))
 July2005SexRatio<-July2005US$V5[2:87]/July2005US$V6[2:87]
 
+#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info)
 All2009US<-read.table(file="https://www2.census.gov/programs-surveys/popest/datasets/2000-2010/intercensal/national/us-est00int-alldata.csv",header=FALSE,skip=3,sep=",")
 July2009US<-subset(All2009US,c(All2009US$V2==2009))
 July2009SexRatio<-July2009US$V5[2:87]/July2009US$V6[2:87]
 lines(July2009SexRatio[16:60],col=9)
 
+#"Annual Estimates of the Resident Population by Single Year of Age and Sex for the United States: April 1, 2010 to July 1, 2018 (NC-EST2018-AGESEX-RES)"
 All2010US<-read.table(file="https://www2.census.gov/programs-surveys/popest/technical-documentation/file-layouts/2010-2018/nc-est2018-agesex-res.csv",header=TRUE,sep=",")
 July2010USMale<-subset(All2010US$POPESTIMATE2010,c(All2010US$SEX==1))
 July2010USFemale<-subset(All2010US$POPESTIMATE2010,c(All2010US$SEX==2))
 July2010SexRatio<-July2010USMale/July2010USFemale
 
+#"Annual Estimates of the Resident Population by Single Year of Age and Sex for the United States: April 1, 2010 to July 1, 2018 (NC-EST2018-AGESEX-RES)"
 All2015US<-read.table(file="https://www2.census.gov/programs-surveys/popest/technical-documentation/file-layouts/2010-2018/nc-est2018-agesex-res.csv",header=TRUE,sep=",")
 July2015USMale<-subset(All2015US$POPESTIMATE2015,c(All2015US$SEX==1))
 July2015USFemale<-subset(All2015US$POPESTIMATE2015,c(All2015US$SEX==2))
