@@ -106,3 +106,4 @@ legend("topright",legend=c("1970","1980","1990","2000","2010"),col=c(1,4,7,10,13
 title("Sex ratios, selected ages and years, USA")
 mtext(side=1,line=4,adj=-.75,text=paste(c("Source: U.S. Census Bureau estimates. More info at github.com/edyhsgr/USSexRatiosByAge.")),cex=.75)
 
+
