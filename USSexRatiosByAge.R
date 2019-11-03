@@ -103,6 +103,6 @@ lines(July2010SexRatio[16:60],col=13,lwd=3)
 axis(side=1,at=1:45,labels=c(15:59),cex.axis=.75)
 axis(side=2)
 legend("topright",legend=c("1970","1980","1990","2000","2010"),col=c(1,4,7,10,13),lty=1,lwd=3)
-title("Sex ratios, selected ages and years, USA resident")
+title("Sex ratios, selected ages and years, USA")
 mtext(side=1,line=4,adj=-.75,text=paste(c("Source: U.S. Census Bureau estimates. More info at github.com/edyhsgr/USSexRatiosByAge.")),cex=.75)
 
