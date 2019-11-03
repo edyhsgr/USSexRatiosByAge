@@ -14,16 +14,16 @@ July1970USFemale<-as.numeric(gsub(",","",All1970US$X.3[1:86]))
 July1970SexRatio<-July1970USMale/July1970USFemale
 
 #INCLUDES OVERSEAS MILITARY
-#All1975US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1975.csv",header=TRUE,sep=",",skip=7)
-#July1975USMale<-as.numeric(gsub(",","",All1975US$X.2[1:86]))
-#July1975USFemale<-as.numeric(gsub(",","",All1975US$X.3[1:86]))
-#July1975SexRatio<-July1975USMale/July1975USFemale
+All1975US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1975.csv",header=TRUE,sep=",",skip=7)
+July1975USMale<-as.numeric(gsub(",","",All1975US$X.2[1:86]))
+July1975USFemale<-as.numeric(gsub(",","",All1975US$X.3[1:86]))
+July1975SexRatio<-July1975USMale/July1975USFemale
 
 #INCLUDES OVERSEAS MILITARY
-#All1979US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1979.csv",header=TRUE,sep=",",skip=7)
-#July1979USMale<-as.numeric(gsub(",","",All1979US$X.2[1:86]))
-#July1979USFemale<-as.numeric(gsub(",","",All1979US$X.3[1:86]))
-#July1979SexRatio<-July1979USMale/July1979USFemale
+All1979US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1979.csv",header=TRUE,sep=",",skip=7)
+July1979USMale<-as.numeric(gsub(",","",All1979US$X.2[1:86]))
+July1979USFemale<-as.numeric(gsub(",","",All1979US$X.3[1:86]))
+July1979SexRatio<-July1979USMale/July1979USFemale
 
 #"RESIDENT POPULATION OF STATES" "THE JULY 1989 INTERCENSALS ESTIMATES IN THIS FILE ARE CONSISTENT WITH AND DESCRIBED IN CURRENT POPULATION REPORTS, SERIES P25-1106"
 July1980<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1980-1990/state/asrh/stiag780.txt",header=TRUE,skip=27,sep="")
@@ -72,7 +72,6 @@ July2005SexRatio<-July2005US$V5[2:87]/July2005US$V6[2:87]
 All2009US<-read.table(file="https://www2.census.gov/programs-surveys/popest/datasets/2000-2010/intercensal/national/us-est00int-alldata.csv",header=FALSE,skip=3,sep=",")
 July2009US<-subset(All2009US,c(All2009US$V2==2009))
 July2009SexRatio<-July2009US$V5[2:87]/July2009US$V6[2:87]
-lines(July2009SexRatio[16:60],col=9)
 
 #"ANNUAL ESTIMATES OF THE RESIDENT POPULATION BY SINGLE YEAR OF AGE AND SEX FOR THE UNITED STATES: APRIL 1, 2010 TO JULY 1, 2018 (NC-EST2018-AGESEX-RES)"
 All2010US<-read.table(file="https://www2.census.gov/programs-surveys/popest/technical-documentation/file-layouts/2010-2018/nc-est2018-agesex-res.csv",header=TRUE,sep=",")
