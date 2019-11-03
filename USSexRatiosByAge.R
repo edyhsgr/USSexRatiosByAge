@@ -7,11 +7,11 @@
 ##########
 
 #GETTING DATA BY YEAR
-#Includes overseas military
-#All1970US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1970.csv",header=TRUE,sep=",",skip=7)
-#July1970USMale<-as.numeric(gsub(",","",All1970US$X.2[1:86]))
-#July1970USFemale<-as.numeric(gsub(",","",All1970US$X.3[1:86]))
-#July1970SexRatio<-July1970USMale/July1970USFemale
+Includes overseas military
+All1970US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1970.csv",header=TRUE,sep=",",skip=7)
+July1970USMale<-as.numeric(gsub(",","",All1970US$X.2[1:86]))
+July1970USFemale<-as.numeric(gsub(",","",All1970US$X.3[1:86]))
+July1970SexRatio<-July1970USMale/July1970USFemale
 
 #INCLUDES OVERSEAS MILITARY
 #All1975US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1975.csv",header=TRUE,sep=",",skip=7)
@@ -87,10 +87,10 @@ July2015USFemale<-subset(All2015US$POPESTIMATE2015,c(All2015US$SEX==2))
 July2015SexRatio<-July2015USMale/July2015USFemale
 
 #GRAPH
-#plot(July1970SexRatio[16:60],type="l",axes=FALSE,ylab="sex ratio",xlab="age",ylim=c(.8,1.1))
+plot(July1970SexRatio[16:60],type="l",axes=FALSE,ylab="sex ratio",xlab="age",ylim=c(.8,1.1))
 #lines(July1975SexRatio[16:60],col=2)
 #lines(July1979SexRatio[16:60],col=3)
-plot(July1980SexRatio$x[16:60],col=4,type="l",axes=FALSE,ylab="sex ratio",xlab="age",ylim=c(.8,1.1))
+lines(July1980SexRatio$x[16:60],col=4)
 #lines(July1985SexRatio$x[16:60],col=5)
 #lines(July1989SexRatio$x[16:60],col=6)
 lines(July1990SexRatio[16:60],col=7)
@@ -103,7 +103,7 @@ lines(July2010SexRatio[16:60],col=13)
 #lines(July2015SexRatio[16:60],col=14)
 axis(side=1,at=1:45,labels=c(15:59),cex.axis=.75)
 axis(side=2)
-legend("topright",legend=c("1980","1990","2000","2010"),col=c(4,7,10,13),lty=1)
+legend("topright",legend=c("1970","1980","1990","2000","2010"),col=c(1,4,7,10,13),lty=1)
 title("Sex ratios, selected ages and years, USA resident")
 mtext(side=1,line=4,adj=-.75,text=paste(c("Source: U.S. Census Bureau resident estimates. More info at github.com/edyhsgr/USSexRatiosByAge.")),cex=.75)
 
