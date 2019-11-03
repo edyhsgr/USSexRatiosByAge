@@ -23,16 +23,19 @@
 #July1979USFemale<-as.numeric(gsub(",","",All1979US$X.3[1:86]))
 #July1979SexRatio<-July1979USMale/July1979USFemale
 
+#"RESIDENT POPULATION OF STATES" "The July 1989 intercensals estimates in this file are consistent with and described in Current Population Reports, Series P25-1106"
 July1980<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1980-1990/state/asrh/stiag780.txt",header=TRUE,skip=27,sep="")
 July1980USMale<-aggregate(July1980[,5], by=list(July1980[,3]), FUN=sum)
 July1980USFemale<-aggregate(July1980[,6], by=list(July1980[,3]), FUN=sum)
 July1980SexRatio<-July1980USMale/July1980USFemale
 
+#"RESIDENT POPULATION OF STATES" "The July 1989 intercensals estimates in this file are consistent with and described in Current Population Reports, Series P25-1106"
 July1985<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1980-1990/state/asrh/stiag785.txt",header=TRUE,skip=27,sep="")
 July1985USMale<-aggregate(July1985[,5], by=list(July1985[,3]), FUN=sum)
 July1985USFemale<-aggregate(July1985[,6], by=list(July1985[,3]), FUN=sum)
 July1985SexRatio<-July1985USMale/July1985USFemale
 
+#"RESIDENT POPULATION OF STATES" "The July 1989 intercensals estimates in this file are consistent with and described in Current Population Reports, Series P25-1106"
 July1989<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1980-1990/state/asrh/stiag789.txt",header=TRUE,skip=27,sep="")
 July1989USMale<-aggregate(July1989[,5], by=list(July1989[,3]), FUN=sum)
 July1989USFemale<-aggregate(July1989[,6], by=list(July1989[,3]), FUN=sum)
@@ -53,17 +56,17 @@ All1999US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tabl
 July1999US<-subset(All1999US,All1999US$V1=="July 1, 1999")
 July1999SexRatio<-July1999US$V4[2:102]/July1999US$V5[2:102]
 
-#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info)
+#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info, but I think correct/resident)
 All2000US<-read.table(file="https://www2.census.gov/programs-surveys/popest/datasets/2000-2010/intercensal/national/us-est00int-alldata.csv",header=FALSE,skip=3,sep=",")
 July2000US<-subset(All2000US,c(All2000US$V1==7,All2000US$V2==2000))
 July2000SexRatio<-July2000US$V5[2:87]/July2000US$V6[2:87]
 
-#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info)
+#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info, but I think correct/resident)
 All2005US<-read.table(file="https://www2.census.gov/programs-surveys/popest/datasets/2000-2010/intercensal/national/us-est00int-alldata.csv",header=FALSE,skip=3,sep=",")
 July2005US<-subset(All2005US,c(All2005US$V2==2005))
 July2005SexRatio<-July2005US$V5[2:87]/July2005US$V6[2:87]
 
-#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info)
+#From US Census Bureau 2000 to 2010 Intercensal data sets directory (need more info, but I think correct/resident)
 All2009US<-read.table(file="https://www2.census.gov/programs-surveys/popest/datasets/2000-2010/intercensal/national/us-est00int-alldata.csv",header=FALSE,skip=3,sep=",")
 July2009US<-subset(All2009US,c(All2009US$V2==2009))
 July2009SexRatio<-July2009US$V5[2:87]/July2009US$V6[2:87]
