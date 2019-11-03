@@ -3,17 +3,16 @@
 #EDDIE HUNSINGER, NOVEMBER 2019
 #
 #THIS CODE HAS NOT BEEN REVIEWED
-#I AIMED FOR RESIDENT US, BUT FOR THE 1970s IT IS CURRENTLY RESIDENT US PLUS OVERSEAS MILITARY
+#I ACTUALLY AIMED FOR RESIDENT US JUST TO BE UNIFORM, BUT FOR THE 1970s IT IS CURRENTLY RESIDENT US PLUS OVERSEAS MILITARY
 ##########
 
 #GETTING DATA BY YEAR
-Includes overseas military
+#INCLUDES OVERSEAS MILITARY
 All1970US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1970.csv",header=TRUE,sep=",",skip=7)
 July1970USMale<-as.numeric(gsub(",","",All1970US$X.2[1:86]))
 July1970USFemale<-as.numeric(gsub(",","",All1970US$X.3[1:86]))
 July1970SexRatio<-July1970USMale/July1970USFemale
 
-#INCLUDES OVERSEAS MILITARY
 #All1975US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/asrh/pe-11-1975.csv",header=TRUE,sep=",",skip=7)
 #July1975USMale<-as.numeric(gsub(",","",All1975US$X.2[1:86]))
 #July1975USFemale<-as.numeric(gsub(",","",All1975US$X.3[1:86]))
