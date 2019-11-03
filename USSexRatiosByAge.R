@@ -103,5 +103,5 @@ axis(side=1,at=1:45,labels=c(15:59))
 axis(side=2)
 legend("topright",legend=c("1980","1985","1990","1995","2000","2005","2010","2015"),col=c(4,5,7,8,10,11,13,14),lty=1)
 title("Sex ratios, selected ages and years, USA resident")
-mtext(side=1,line=4,adj=.35,text=paste(c("Source: U.S. Census Bureau intercensal resident estimates. More info at github.com/edyhsgr/USSexRatiosByAge.")),cex=.85)
+mtext(side=1,line=4,adj=.35,text=paste(c("Source: U.S. Census Bureau resident estimates. More info at github.com/edyhsgr/USSexRatiosByAge.")),cex=.85)
 
