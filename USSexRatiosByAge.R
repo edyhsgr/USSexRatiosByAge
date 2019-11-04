@@ -25,13 +25,13 @@ July1979USMale<-as.numeric(gsub(",","",All1979US$X.2[1:86]))
 July1979USFemale<-as.numeric(gsub(",","",All1979US$X.3[1:86]))
 July1979SexRatio<-July1979USMale/July1979USFemale
 
-#"RESIDENT POPULATION OF STATES" "THE JULY 1989 INTERCENSALS ESTIMATES IN THIS FILE ARE CONSISTENT WITH AND DESCRIBED IN CURRENT POPULATION REPORTS, SERIES P25-1106"
+#"RESIDENT POPULATION OF STATES" "THE JULY 1980 INTERCENSALS ESTIMATES IN THIS FILE ARE CONSISTENT WITH AND DESCRIBED IN CURRENT POPULATION REPORTS, SERIES P25-1106"
 July1980<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1980-1990/state/asrh/stiag780.txt",header=TRUE,skip=27,sep="")
 July1980USMale<-aggregate(July1980[,5], by=list(July1980[,3]), FUN=sum)
 July1980USFemale<-aggregate(July1980[,6], by=list(July1980[,3]), FUN=sum)
 July1980SexRatio<-July1980USMale/July1980USFemale
 
-#"RESIDENT POPULATION OF STATES" "THE JULY 1989 INTERCENSALS ESTIMATES IN THIS FILE ARE CONSISTENT WITH AND DESCRIBED IN CURRENT POPULATION REPORTS, SERIES P25-1106"
+#"RESIDENT POPULATION OF STATES" "THE JULY 1985 INTERCENSALS ESTIMATES IN THIS FILE ARE CONSISTENT WITH AND DESCRIBED IN CURRENT POPULATION REPORTS, SERIES P25-1106"
 July1985<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1980-1990/state/asrh/stiag785.txt",header=TRUE,skip=27,sep="")
 July1985USMale<-aggregate(July1985[,5], by=list(July1985[,3]), FUN=sum)
 July1985USFemale<-aggregate(July1985[,6], by=list(July1985[,3]), FUN=sum)
@@ -48,12 +48,12 @@ All1990US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tabl
 July1990US<-subset(All1990US,All1990US$V1=="July 1, 1990")
 July1990SexRatio<-July1990US$V4[2:102]/July1990US$V5[2:102]
 
-#"INTERCENSAL ESTIMATES OF THE UNITED STATES RESIDENT POPULATION BY AGE AND SEX: 1990"
+#"INTERCENSAL ESTIMATES OF THE UNITED STATES RESIDENT POPULATION BY AGE AND SEX: 1995"
 All1995US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1990-2000/intercensal/national/us-est90int-07-1995.csv",header=FALSE,skip=3,sep=",")
 July1995US<-subset(All1995US,All1995US$V1=="July 1, 1995")
 July1995SexRatio<-July1995US$V4[2:102]/July1995US$V5[2:102]
 
-#"INTERCENSAL ESTIMATES OF THE UNITED STATES RESIDENT POPULATION BY AGE AND SEX: 1990"
+#"INTERCENSAL ESTIMATES OF THE UNITED STATES RESIDENT POPULATION BY AGE AND SEX: 1999"
 All1999US<-read.table(file="https://www2.census.gov/programs-surveys/popest/tables/1990-2000/intercensal/national/us-est90int-07-1999.csv",header=FALSE,skip=3,sep=",")
 July1999US<-subset(All1999US,All1999US$V1=="July 1, 1999")
 July1999SexRatio<-July1999US$V4[2:102]/July1999US$V5[2:102]
